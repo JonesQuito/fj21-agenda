@@ -38,11 +38,14 @@ th {
 		<%
 			ContatoDAO dao = new ContatoDAO();
 			List<Contato> contatos = dao.getLista();
-
+String cor;
+int index = 0;
 			for (Contato contato : contatos) {
+				cor = (index % 2 == 0 ? "aaee88" : "ffffff");
+				index ++;
 		%>
 
-		<tr>
+		<tr bgcolor= <%=cor %>>
 			<td><%=contato.getNome()%></td>
 			<td><%=contato.getEmail()%></td>
 			<td><%=contato.getEndereco()%></td>
