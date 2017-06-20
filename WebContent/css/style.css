@@ -1,0 +1,42 @@
+.cabecalho{
+    text-align: center;
+    width: 30%;
+    padding: 7px;
+    background-color: rgba(0,0,0,.2);
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0px 0px 4px blue;
+}
+.interface{
+	width: 30%;
+	box-shadow: 0px 0px 5px blue;
+	margin: auto;
+	padding: 5px;
+}
+
+.form{
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	
+}
+.td{
+	padding: 10px;
+	padding-left: 0px;
+}
+
+#formulario tr{
+	padding:10px;
+}
+
+input{
+	border-radius: 1px;
+}
+
+.btn-success:HOVER{
+	-webkit-transform: scale(1.1);
+}
+
+.alert alert-success{
+	margin-top: 5px;
+}

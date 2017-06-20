@@ -13,15 +13,16 @@
 </head>
 <body>
 	<c:import url="cabecalho.jsp"></c:import>
-	<h1>Adiciona Contatos</h1>
+	<h3>Edita Contatos</h3>
 	<hr />
 	<form action="adicionaContato">
-		Nome: <input type="text" name="nome" /><br /> 
-		E-mail: <input type="text" name="email" /><br /> 
-		Endereço: <input type="text" name="endereco" /><br />
+		Nome: <input type="text" name="nome" value="${nome}"/><br /> 
+		E-mail: <input type="text" name="email" value="${email}" /><br /> 
+		Endereço: <input type="text" name="endereco" value="${endereco}" /><br />
 		Data Nascimento: <caelum:campoData id="dataNascimento" /><br /> 
+
 		<input type="submit" value="Gravar" />
 	</form>
-	<c:import url="rodape.jsp"></c:import>
+	<c:import url="/rodape.jsp"></c:import>
 </body>
 </html>

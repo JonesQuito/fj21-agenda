@@ -69,7 +69,6 @@ public class ContatoDAO {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-
 	}
 
 	public List<Contato> getLista() {
@@ -108,7 +107,6 @@ public class ContatoDAO {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-
 	}
 
 	public void altera(Contato contato) {
@@ -133,10 +131,9 @@ public class ContatoDAO {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
-
 	}
 
-	public void remove(Contato contato) {
+	public void excluir(Contato contato) {
 
 		try {
 			PreparedStatement stmt = connection.prepareStatement("delete from contatos where id=?");
