@@ -14,13 +14,16 @@ import br.com.caelum.agenda.modelo.Contato;
 
 public class ContatoDAO {
 
-	// a conexão com o banco de dados
 	private Connection connection;
+	
+	public ContatoDAO(Connection connection){
+		this.connection = connection;
+	}
 
 	public ContatoDAO() {
 		this.connection = new ConnectionFactory().getConnection();
 	}
-
+	
 	public void adiciona(Contato contato) {
 		String sql = "insert into contatos" + "(nome, email, endereco, dataNascimento)" + " values (?,?,?,?)";
 
@@ -60,7 +63,6 @@ public class ContatoDAO {
 				data.setTime(rs.getDate("dataNascimento"));
 				contato.setDataNascimento(data);
 			}
-
 			rs.close();
 			stmt.close();
 			this.connection.close();
